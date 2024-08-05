@@ -19,13 +19,13 @@ const App = () => {
           LLM Observability Framework
         </Typography>
         <Typography variant="body1" paragraph>
-          Observability is a discipline that organizations must choose to implement. It is comprised of skilled professionals, specific tools, and a unique mindset. With the successful practice of these components, organizations can achieve increased confidence in their LLM Applications and maintain their brand integrity.
+          The path to excellence in AI applications lies in mastering the observability of Large Language Models (LLMs). Observability is not merely a technical requirement but a discipline that combines expertise, innovative tools, and a proactive mindset. By embedding observability into the core of their operations, organizations can strengthen their LLM applications' reliability and uphold their brand's integrity.
         </Typography>
         <Typography variant="body1" paragraph>
-          By defining a maturity model for observing LLM Applications, organizations can realize these benefits through an iterative delivery process. By focusing on incremental delivery, we can grow the Observability Discipline, grow the knowledge of the team, and deliver business results sooner.
+          Developing a maturity model for LLM Observability is crucial for unlocking these benefits. By adopting an iterative approach to delivery, organizations can progressively enhance their observability practices, empowering teams to learn and adapt while delivering measurable business results.
         </Typography>
         <Typography variant="body1" paragraph>
-          We must achieve progress over perfection.
+          Embracing <strong>progress over perfection</strong> is key to sustaining momentum and driving innovation.
         </Typography>
         <ObservabilityTable />
       </Box>
