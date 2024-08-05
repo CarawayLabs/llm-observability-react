@@ -6,7 +6,7 @@ import { Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Paper
 const ObservabilityTable = () => {
   const rows = [
     { key: 'Key Characteristics', crawl: ['Basic logging'], walk: ['Detailed logging', 'Monitoring alerts'], run: ['Real-time analytics', 'Automated anomaly detection'] },
-    { key: 'Achievements / Attributes', crawl: ['Initial setup'], walk: ['Basic insights'], run: ['Advanced insights', 'Predictive analytics'] },
+    { key: 'Achievements / Attributes', crawl: ['Basic Application logging', 'Ad hoc Prompt Engineering', 'Users call support to submit feedbac'], walk: ['LLM Evals in Deployment Pipeline', 'Prompt A|B Testing', 'Ability to observe LLM traces', 'Users can submit feedback about LLM Performance'], run: ['insights', 'Predictive analytics', 'Email Alerts to Product-Development Team when LLM produces undesired responses'] },
     { key: 'Business Impact', crawl: ['Limited insights'], walk: ['Improved decision making'], run: ['Maximized ROI', 'Strategic insights'] },
   ];
 

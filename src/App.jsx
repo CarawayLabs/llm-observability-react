@@ -12,7 +12,11 @@ const App = () => {
           LLM Observability Framework
         </Typography>
         <Typography variant="body1" paragraph>
-          By defining a maturity model for observing LLM Applications, organizations can have increased confidence in the safety and robustness of their Generative AI-based products.
+          Observability is a disciplene comprised of skilled professionals, specific tools and a unique mindset. With the succesful combination of these components, organizations can acieve increased confidence in their LLM Applications and maintain their brand integrity. 
+          
+          By defining a maturity model for observing LLM Applications, organizations can realize these benefits through an iterative delivery process. By focusing on incremental delivery, we can grow the Observability Discipline, grow the knowledge of the team and deliver business results sooner. 
+
+          We must achieve progress over perfection. 
         </Typography>
         <ObservabilityTable />
       </Box>
