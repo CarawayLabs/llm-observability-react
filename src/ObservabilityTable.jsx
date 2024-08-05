@@ -1,43 +1,73 @@
 // src/ObservabilityTable.jsx
 
 import React from 'react';
-import { Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Paper, Checkbox, Typography, Box, LinearProgress } from '@mui/material';
+import {
+  Table,
+  TableBody,
+  TableCell,
+  TableContainer,
+  TableHead,
+  TableRow,
+  Paper,
+  Checkbox,
+  Typography,
+  Box,
+  LinearProgress,
+} from '@mui/material';
 
 const ObservabilityTable = () => {
   const rows = [
-    { 
-      key: 'Key Characteristics', 
-      crawl: ['Basic logging'], 
-      walk: ['Detailed logging', 'Monitoring alerts'], 
-      run: ['Real-time analytics', 'Automated detection and communication of poor performance', 'Deployment of specific models for distinct use cases'] 
+    {
+      key: 'Key Characteristics',
+      crawl: ['Basic logging'],
+      walk: ['Detailed logging', 'Monitoring alerts'],
+      run: [
+        'Real-time analytics',
+        'Automated detection and communication of poor performance',
+        'Deployment of specific models for distinct use cases',
+      ],
     },
-    { 
-      key: 'Achievements / Attributes', 
-      crawl: ['Basic Application logging', 'Ad hoc Prompt Engineering', 'Users call support to submit feedback'], 
-      walk: ['LLM Evals in Deployment Pipeline', 'Prompt A|B Testing', 'Ability to observe LLM traces', 'RAG Relevance Scores', 'Users can submit feedback about LLM Performance'], 
-      run: ['Safety Controls Implemented to limit unsafe (toxic) LLM output', 'Email Alerts to Product-Development Team when LLM produces undesired responses', 'Different LLMs used for specific tasks or purposes'] 
+    {
+      key: 'Achievements / Attributes',
+      crawl: ['Basic Application logging', 'Ad hoc Prompt Engineering', 'Users call support to submit feedback'],
+      walk: [
+        'LLM Evals in Deployment Pipeline',
+        'Prompt A|B Testing',
+        'Ability to observe LLM traces',
+        'RAG Relevance Scores',
+        'Users can submit feedback about LLM Performance',
+      ],
+      run: [
+        'Safety Controls Implemented to limit unsafe (toxic) LLM output',
+        'Email Alerts to Product-Development Team when LLM produces undesired responses',
+        'Different LLMs used for specific tasks or purposes',
+      ],
     },
-    { 
-      key: 'Business Impact', 
-      crawl: ['Limited insights'], 
-      walk: ['Improved decision making'], 
-      run: ['Maximized ROI', 'Strategic insights'] 
+    {
+      key: 'Business Impact',
+      crawl: ['Limited insights'],
+      walk: ['Improved decision making'],
+      run: ['Maximized ROI', 'Strategic insights'],
     },
   ];
 
   return (
-    <TableContainer component={Paper}>
+    <TableContainer component={Paper} sx={{ maxWidth: 900, margin: 'auto', marginTop: 4 }}>
       <Table>
         <TableHead>
           <TableRow>
-            <TableCell></TableCell>
-            <TableCell>Crawl</TableCell>
-            <TableCell>Walk</TableCell>
-            <TableCell>Run</TableCell>
+            <TableCell sx={{ fontWeight: 'bold', backgroundColor: '#f5f5f5', textAlign: 'center' }}></TableCell>
+            <TableCell sx={{ fontWeight: 'bold', fontSize: '1.1rem', textAlign: 'center', backgroundColor: '#e0f7fa' }}>
+              Crawl
+            </TableCell>
+            <TableCell sx={{ fontWeight: 'bold', fontSize: '1.1rem', textAlign: 'center', backgroundColor: '#b2ebf2' }}>
+              Walk
+            </TableCell>
+            <TableCell sx={{ fontWeight: 'bold', fontSize: '1.1rem', textAlign: 'center', backgroundColor: '#80deea' }}>
+              Run
+            </TableCell>
           </TableRow>
-        </TableHead>
-        <TableBody>
-        <TableRow>
+          <TableRow>
             <TableCell colSpan={4}>
               <Box display="flex" alignItems="center">
                 <Typography variant="body2" color="textSecondary" style={{ width: '15%' }}>
@@ -51,12 +81,10 @@ const ObservabilityTable = () => {
                     height: 10,
                     borderRadius: 5,
                     margin: '0 10px',
-                    backgroundColor: (theme) =>
-                      theme.palette.mode === 'light' ? '#f0f0f0' : '#303030',
+                    backgroundColor: (theme) => (theme.palette.mode === 'light' ? '#f0f0f0' : '#303030'),
                     '& .MuiLinearProgress-bar': {
                       borderRadius: 5,
-                      backgroundColor: (theme) =>
-                        theme.palette.mode === 'light' ? '#81c784' : '#a5d6a7',
+                      backgroundColor: (theme) => (theme.palette.mode === 'light' ? '#81c784' : '#a5d6a7'),
                     },
                   }}
                 />
@@ -66,10 +94,11 @@ const ObservabilityTable = () => {
               </Box>
             </TableCell>
           </TableRow>
-          
+        </TableHead>
+        <TableBody>
           {rows.map((row, index) => (
-            <TableRow key={index}>
-              <TableCell>{row.key}</TableCell>
+            <TableRow key={index} sx={{ '&:nth-of-type(even)': { backgroundColor: '#f9f9f9' } }}>
+              <TableCell sx={{ fontWeight: 'bold', width: '20%' }}>{row.key}</TableCell>
               <TableCell>
                 {row.crawl.map((item, idx) => (
                   <Typography key={idx}>
@@ -96,7 +125,6 @@ const ObservabilityTable = () => {
               </TableCell>
             </TableRow>
           ))}
-         
         </TableBody>
       </Table>
     </TableContainer>

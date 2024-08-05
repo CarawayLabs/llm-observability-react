@@ -7,7 +7,14 @@ import ObservabilityTable from './ObservabilityTable';
 const App = () => {
   return (
     <Container>
-      <Box my={4}>
+      <Box
+        display="flex"
+        flexDirection="column"
+        alignItems="center"
+        justifyContent="center"
+        my={4}
+        sx={{ textAlign: 'center' }}
+      >
         <Typography variant="h4" component="h1" gutterBottom>
           LLM Observability Framework
         </Typography>
