@@ -9,7 +9,6 @@ import {
   TableHead,
   TableRow,
   Paper,
-  Checkbox,
   Typography,
   Box,
   LinearProgress,
@@ -19,35 +18,75 @@ const ObservabilityTable = () => {
   const rows = [
     {
       key: 'Key Characteristics',
-      crawl: ['Basic logging'],
-      walk: ['Detailed logging', 'Monitoring alerts'],
-      run: [
-        'Real-time analytics',
-        'Automated detection and communication of poor performance',
-        'Deployment of specific models for distinct use cases',
+      crawl: [
+        'Establish foundational components of observability',
+        'Basic data logging and monitoring practices',
+        'Collect information on performance and interactions',
+        'Focus on understanding usage patterns and gathering feedback',
+        'Limited metrics and reliance on human insights',
       ],
-    },
-    {
-      key: 'Achievements / Attributes',
-      crawl: ['Basic Application logging', 'Ad hoc Prompt Engineering', 'Users call support to submit feedback'],
       walk: [
-        'LLM Evals in Deployment Pipeline',
-        'Prompt A|B Testing',
-        'Ability to observe LLM traces',
-        'RAG Relevance Scores',
-        'Users can submit feedback about LLM Performance',
+        'Structured approach to observability',
+        'Automated evaluation processes for LLM responses',
+        'Integration of prompt A/B testing',
+        'Safety controls to reduce undesirable outputs',
+        'Enhanced ability to observe and validate performance',
       ],
       run: [
-        'Safety Controls Implemented to limit unsafe (toxic) LLM output',
-        'Email Alerts to Product-Development Team when LLM produces undesired responses',
-        'Different LLMs used for specific tasks or purposes',
+        'Robust automated monitoring systems',
+        'Real-time analytics and swift reaction to events',
+        'Advanced predictive analytics and modular setups',
+        'Automated alerts for performance issues and model drift',
+        'Leverage rich insights for improved experiences and efficiencies',
       ],
     },
     {
-      key: 'Business Impact',
-      crawl: ['Limited insights'],
-      walk: ['Improved decision making'],
-      run: ['Maximized ROI', 'Strategic insights'],
+      key: 'Business Outcomes',
+      crawl: [
+        'Rudimentary understanding of user interactions',
+        'Baseline application performance',
+        'Foundation for informed development decisions',
+      ],
+      walk: [
+        'Data-driven optimization of LLM offerings',
+        'Enhanced user satisfaction through quality responses',
+        'Proactive risk mitigation for model outputs',
+      ],
+      run: [
+        'Resilient and adaptive LLM systems',
+        'Minimized operational risks and maximized satisfaction',
+        'Continuous evolution through strategic adjustments',
+      ],
+    },
+    {
+      key: 'Functional Requirements',
+      crawl: [
+        'Basic Application Logging',
+        'Ad hoc Prompt Engineering',
+        'Users call support to submit feedback',
+        'Manual tracking of user satisfaction',
+        'Limited observability into errors and metrics',
+        'Basic incident reporting for problematic interactions',
+        'Collection of preliminary user behavior data',
+      ],
+      walk: [
+        'LLM Evaluations in Deployment Pipeline',
+        'Prompt A/B Testing for better performance',
+        'Capability to observe LLM traces and spans',
+        'RAG Relevance Scores',
+        'User-Reported Feedback Mechanism',
+        'Implementation of Safety Controls (LLM Guardrails)',
+        'Systematic analysis of logging data',
+      ],
+      run: [
+        'Automated alerts for LLM Guardrails breaches',
+        'Email Alerts for undesired responses or anomalies',
+        'Deployment of LLMs for specific tasks',
+        'Automated alerts for model drift',
+        'Comprehensive dashboards with real-time metrics',
+        'Continuous performance evaluations',
+        'Advanced user feedback loops',
+      ],
     },
   ];
 
@@ -102,24 +141,21 @@ const ObservabilityTable = () => {
               <TableCell>
                 {row.crawl.map((item, idx) => (
                   <Typography key={idx}>
-                    <Checkbox checked={true} />
-                    {item}
+                    • {item}
                   </Typography>
                 ))}
               </TableCell>
               <TableCell>
                 {row.walk.map((item, idx) => (
                   <Typography key={idx}>
-                    <Checkbox checked={true} />
-                    {item}
+                    • {item}
                   </Typography>
                 ))}
               </TableCell>
               <TableCell>
                 {row.run.map((item, idx) => (
                   <Typography key={idx}>
-                    <Checkbox checked={true} />
-                    {item}
+                    • {item}
                   </Typography>
                 ))}
               </TableCell>
