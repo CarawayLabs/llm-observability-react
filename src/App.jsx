@@ -6,7 +6,7 @@ import ObservabilityTable from './ObservabilityTable';
 
 const App = () => {
   return (
-    <Container>
+    <Container maxWidth="lg" sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center', minHeight: '100vh' }}>
       <Box
         display="flex"
         flexDirection="column"
