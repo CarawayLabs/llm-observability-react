@@ -37,6 +37,36 @@ const ObservabilityTable = () => {
           </TableRow>
         </TableHead>
         <TableBody>
+        <TableRow>
+            <TableCell colSpan={4}>
+              <Box display="flex" alignItems="center">
+                <Typography variant="body2" color="textSecondary" style={{ width: '15%' }}>
+                  High Risk / Manual Effort
+                </Typography>
+                <LinearProgress
+                  variant="determinate"
+                  value={50}
+                  sx={{
+                    flexGrow: 1,
+                    height: 10,
+                    borderRadius: 5,
+                    margin: '0 10px',
+                    backgroundColor: (theme) =>
+                      theme.palette.mode === 'light' ? '#f0f0f0' : '#303030',
+                    '& .MuiLinearProgress-bar': {
+                      borderRadius: 5,
+                      backgroundColor: (theme) =>
+                        theme.palette.mode === 'light' ? '#81c784' : '#a5d6a7',
+                    },
+                  }}
+                />
+                <Typography variant="body2" color="textSecondary" style={{ width: '15%', textAlign: 'right' }}>
+                  Low Risk / High Automation
+                </Typography>
+              </Box>
+            </TableCell>
+          </TableRow>
+          
           {rows.map((row, index) => (
             <TableRow key={index}>
               <TableCell>{row.key}</TableCell>
@@ -66,35 +96,7 @@ const ObservabilityTable = () => {
               </TableCell>
             </TableRow>
           ))}
-          <TableRow>
-            <TableCell colSpan={4}>
-              <Box display="flex" alignItems="center">
-                <Typography variant="body2" color="textSecondary" style={{ width: '15%' }}>
-                  High Risk / Manual Effort
-                </Typography>
-                <LinearProgress
-                  variant="determinate"
-                  value={50}
-                  sx={{
-                    flexGrow: 1,
-                    height: 10,
-                    borderRadius: 5,
-                    margin: '0 10px',
-                    backgroundColor: (theme) =>
-                      theme.palette.mode === 'light' ? '#f0f0f0' : '#303030',
-                    '& .MuiLinearProgress-bar': {
-                      borderRadius: 5,
-                      backgroundColor: (theme) =>
-                        theme.palette.mode === 'light' ? '#81c784' : '#a5d6a7',
-                    },
-                  }}
-                />
-                <Typography variant="body2" color="textSecondary" style={{ width: '15%', textAlign: 'right' }}>
-                  Low Risk / High Automation
-                </Typography>
-              </Box>
-            </TableCell>
-          </TableRow>
+         
         </TableBody>
       </Table>
     </TableContainer>
