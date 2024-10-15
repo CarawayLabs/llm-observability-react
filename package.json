@@ -12,7 +12,7 @@
   "dependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "serve": "^14.2.1",
+    "serve": "^14.2.4",
     "@mui/material": "^5.13.7",
     "@emotion/react": "^11.10.6",
     "@emotion/styled": "^11.10.6"
